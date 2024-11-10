@@ -1,0 +1,176 @@
+📚 Sistema de Biblioteca Digital
+Um sistema completo para gerenciamento de biblioteca digital desenvolvido com Python, Streamlit e Go. O sistema oferece interface intuitiva para gestão de livros, autenticação de usuários e análise de dados.
+🚀 Funcionalidades
+👤 Autenticação e Controle de Acesso
+
+Login e registro de usuários
+Diferentes níveis de acesso (Administrador e Usuário)
+Senhas criptografadas com bcrypt
+Sistema de sessão persistente
+
+📖 Gestão de Livros
+
+Listagem completa do acervo
+Sistema de busca e filtros avançados
+Adição de novos livros (admin)
+Edição de livros existentes (admin)
+Exclusão de livros (admin)
+
+📊 Dashboard e Análises
+
+Métricas gerais do acervo
+Gráficos de distribuição por gênero e categoria
+Análise de autores
+Exportação de dados em CSV e Excel
+
+🛠️ Tecnologias Utilizadas
+
+Frontend: Streamlit
+Backend: Go (Gin)
+Banco de Dados: SQLite
+Autenticação: bcrypt
+Análise de Dados: Pandas
+
+📋 Pré-requisitos
+
+Python 3.8+
+Go 1.16+
+Pip (gerenciador de pacotes Python)
+Git
+
+⚙️ Instalação
+
+Clone o repositório:
+
+bashCopygit clone <url-do-repositorio>
+cd biblioteca-digital
+
+Instale as dependências Python:
+
+bashCopypip install -r requirements.txt
+
+Configure o backend Go:
+
+bashCopycd backend
+go mod init biblioteca
+go get github.com/gin-gonic/gin
+go get modernc.org/sqlite
+🚀 Como Executar
+
+Inicie o backend (em um terminal):
+
+bashCopycd backend
+go run main.go
+
+Inicie o frontend (em outro terminal):
+
+bashCopycd frontend
+streamlit run app.py
+
+Acesse a aplicação em: http://localhost:8501
+
+👥 Credenciais Padrão
+Administrador
+
+Usuário: admin
+Senha: admin123
+
+Usuário Comum
+
+Usuário: user
+Senha: user123
+
+📁 Estrutura do Projeto
+Copybiblioteca-digital/
+├── backend/
+│   ├── main.go
+│   └── biblioteca.db
+├── frontend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── users.json
+└── README.md
+📦 Dependências
+Python
+Copystreamlit>=1.24.0
+pandas>=1.5.0
+bcrypt>=4.0.1
+requests>=2.28.0
+xlsxwriter>=3.0.0
+Go
+Copygithub.com/gin-gonic/gin
+modernc.org/sqlite
+📋 API Endpoints
+Livros
+
+GET /livros - Lista todos os livros
+GET /livros/:id - Busca um livro específico
+POST /livros - Adiciona um novo livro
+PUT /livros/:id - Atualiza um livro
+DELETE /livros/:id - Remove um livro
+
+🔒 Segurança
+
+Senhas armazenadas com hash bcrypt
+Controle de acesso baseado em função
+Validação de dados em todas as operações
+Proteção contra injeção SQL
+CORS configurado para segurança
+
+🎨 Interface
+Temas de Cores
+
+Paleta principal: Azul e branco
+Elementos de destaque: Verde para sucesso, vermelho para erro
+Ícones e elementos visuais para melhor experiência
+
+Responsividade
+
+Interface adaptável para diferentes tamanhos de tela
+Layout otimizado para desktop e tablet
+Componentes redimensionáveis
+
+💡 Uso
+
+Acesso ao Sistema
+
+Faça login com suas credenciais
+Ou registre uma nova conta
+
+
+Navegação
+
+Use o menu lateral para acessar diferentes seções
+Administradores têm acesso a todas as funcionalidades
+Usuários podem visualizar e pesquisar livros
+
+
+Gestão de Livros (Administradores)
+
+Adicione novos livros
+Edite informações existentes
+Remova livros do sistema
+
+
+Dashboard
+
+Visualize estatísticas do acervo
+Exporte dados para análise
+Acompanhe métricas importantes
+
+
+
+🤝 Contribuindo
+
+Faça um Fork do projeto
+Crie uma Branch para sua Feature (git checkout -b feature/AmazingFeature)
+Commit suas mudanças (git commit -m 'Add some AmazingFeature')
+Push para a Branch (git push origin feature/AmazingFeature)
+Abra um Pull Request
+
+🙏 Agradecimentos
+
+Streamlit
+Go
+SQLite
+Pandas
